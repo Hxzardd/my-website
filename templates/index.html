@@ -1,0 +1,162 @@
+<!--
+
+    © hxzard.com
+
+-->
+
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		hxzard.com
+	</title>
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="@hxzard">
+	<meta property="og:theme-color" content="#FFFFF">
+	<meta property="og:description" content="930055165480951809 | @hxzard">
+	<meta property="og:image" content="{{ url_for('static', filename='img/icons/favicon.ico') }}">
+	<meta property="og:url" content="https://hxzard.com">
+
+	<link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='img/icons/favicon-16x16.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='img/icons/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='img/icons/apple-touch-icon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="{{ url_for('static', filename='img/icons/favicon.ico') }}">
+
+	<link rel="manifest" href="{{ url_for('static', filename='img/icons/site.webmanifest') }}">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/tippy.all.css') }}">
+    <!-- Custom CSS Files -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+
+</head>
+
+<body>
+	<div id="landing-page" class="flex items-center justify-center">
+		<div class="cursor-pointer flex items-center justify-center text-5xl text-glow font-medium">
+			<span class="mr-4 text-5xl pl-4">&lt;/</span>
+			<span class="mx-4 text-center text-5xl">
+				CLICK ANYWHERE<br>TO ENTER
+			</span>
+		</div>
+		<span class="ml-4 text-5xl pr-4">&gt;</span>
+	</div>
+	</div>
+
+	<div id="main-content" class="hidden">
+		<video id="background-video" playsinline="playsinline" autoplay="autoplay" loop="loop">
+			<source src="{{ url_for('static', filename='videos/background-min.mp4') }}" type="video/mp4">
+		</video>
+		<div class="flex flex-col items-center justify-start h-screen">
+			<div id="main-box" class="profile-box flex flex-col items-center relative rounded-lg pb-3 slide-down">
+				<span id="mute-button" class="video-icon top-4 left-4 fas fa-volume-up glow-white" data-tooltip="Mute"></span>
+				<span id="pause-button" class="video-icon top-4 right-4 pl-2 fas fa-pause glow-white" data-tooltip="Pause"></span>
+				<div class="top-1/2 transform -translate-y-1/2">
+					<div class="profile-pic-container w-40 h-40 rounded-full overflow-hidden">
+						<img src="{{ url_for('static', filename='img/icons/pfp.png') }}" alt="Profile Picture" class="w-full h-full object-cover" draggable="false">
+					</div>
+				</div>
+				<div class="text-container">
+					<div class="flex flex-col items-center justify-center">
+						<div class="name-badge-container">
+							<a href="https://lookup.guru/930055165480951809" target="_blank" rel="noopener">
+								<div id="sparkles-container" class="sparkles">
+									<h1 class="text-white text-5xl font-semibold my-1 text-glow">hxzard</h1>
+								</div>
+							</a>
+						</div>
+						<a href="https://lookup.guru/930055165480951809" target="_blank" rel="noopener">
+							<p class="text-gray-400 text-sm italic">930055165480951809</p>
+						</a>
+					</div>
+					<div class="mt-7 flex justify-center h-10">
+						<h2 id="typed-text" class="text-white text-xl"></h2>
+					</div>
+					<div id="tooltip-container">
+						<span id="discord-tool" class="fab fa-discord glow-white" data-tooltip="@hxzard"></span>
+						<span id="github-tool" class="fab fa-github glow-white" data-tooltip="Hxxzardd" data-href="{{ url_for('github') }}"></span>
+						<span id="instagram-tool" class="fab fa-instagram glow-white" data-tooltip="@ig_hazard__" data-href="{{ url_for('instagram') }}"></span>
+					</div>
+				</div>
+			</div>
+			<div class="relative flex justify-center mt-4 w-full">
+				<div class="button-container grid grid-cols-2 gap-4">
+					<a id="button-1" href="{{ url_for('discord') }}" target="_blank" rel="noopener" class="btn relative text-white font-semibold py-4 px-4 rounded flex justify-between items-center slide-right">
+						<div class="flex items-center">
+							<span class="bg-neutral-900 rounded p-2 inline-flex items-center mr-3">
+								<img src="{{ url_for('static', filename='img/svg/discord.svg') }}" alt="Discord" class="icon-container glow-discord" draggable="false">
+							</span>
+							<span class="btn-text">Discord</span>
+						</div>
+						<i class="fas fa-arrow-right text-white arrow"></i>
+					</a>
+					<a id="button-2" href="{{ url_for('telegram') }}" target="_blank" rel="noopener" class="btn relative text-white font-semibold py-4 px-4 rounded flex justify-between items-center slide-left">
+						<div class="flex items-center">
+							<span class="bg-neutral-900 rounded p-2 inline-flex items-center mr-3">
+								<img src="{{ url_for('static', filename='img/svg/telegram.svg') }}" alt="Telegram" class="icon-container glow-telegram" draggable="false">
+							</span>
+							<span class="btn-text">Telegram</span>
+						</div>
+						<i class="fas fa-arrow-right text-white arrow"></i>
+					</a>
+					<a id="button-3" href="{{ url_for('instagram') }}" target="_blank" rel="noopener" class="btn relative text-white font-semibold py-4 px-4 rounded col-span-full flex justify-between items-center slide-up">
+						<div class="flex items-center">
+							<span class="bg-neutral-900 rounded p-2 inline-flex items-center mr-3">
+								<img src="{{ url_for('static', filename='img/svg/instagram.svg') }}" alt="Instagram.com" class="icon-container glow-cracked" draggable="false">
+							</span>
+							<span class="btn-text">Instagram</span>
+						</div>
+						<i class="fas fa-arrow-right text-white arrow"></i>
+					</a>
+					<a id="button-4" href="{{ url_for('twitter') }}" target="_blank" rel="noopener" class="btn relative text-white font-semibold py-4 px-4 rounded col-span-full flex justify-between items-center slide-up">
+						<div class="flex items-center">
+							<span class="bg-neutral-900 rounded p-2 inline-flex items-center mr-3">
+								<img src="{{ url_for('static', filename='img/svg/x.svg') }}" alt="Twitter" class="icon-container glow-twitter" draggable="false">
+							</span>
+							<span class="btn-text">X</span>
+						</div>
+						<i class="fas fa-arrow-right text-white arrow"></i>
+					</a>
+					<a id="button-5" href="{{ url_for('linkedin') }}" target="_blank" rel="noopener" class="btn relative text-white font-semibold py-4 px-4 rounded col-span-full flex justify-between items-center slide-up">
+						<div class="flex items-center">
+							<span class="bg-neutral-900 rounded p-2 inline-flex items-center mr-3">
+								<img src="{{ url_for('static', filename='img/svg/linkedin.svg') }}" alt="LinkedIn" class="icon-container glow-linkedin" draggable="false">
+							</span>
+							<span class="btn-text">LinkedIn</span>
+						</div>
+						<i class="fas fa-arrow-right text-white arrow"></i>
+					</a>
+				</div>
+			</div>
+			<div id="footer" class="text-white text-sm font-semibold text-glow">
+				<p>&copy; <span id="current-year"></span> hxzard.com</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/tippy.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/typed.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+
+</html>
